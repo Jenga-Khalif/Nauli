@@ -599,16 +599,12 @@ video {
   width: 50%;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-48 {
   width: 12rem;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-full {
+  width: 100%;
 }
 
 .max-w-4xl {
@@ -625,10 +621,6 @@ video {
 
 .scroll-mt-20 {
   scroll-margin-top: 5rem;
-}
-
-.scroll-mt-10 {
-  scroll-margin-top: 2.5rem;
 }
 
 .flex-col {
@@ -651,20 +643,16 @@ video {
   justify-content: space-between;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -738,10 +726,6 @@ video {
   text-align: right;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -775,6 +759,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-indigo-200 {
+  --tw-text-opacity: 1;
+  color: rgb(199 210 254 / var(--tw-text-opacity));
+}
+
 .text-indigo-400 {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
@@ -800,31 +789,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-violet-500 {
-  --tw-text-opacity: 1;
-  color: rgb(139 92 246 / var(--tw-text-opacity));
-}
-
-.text-indigo-200 {
-  --tw-text-opacity: 1;
-  color: rgb(199 210 254 / var(--tw-text-opacity));
-}
-
-.text-pink-400 {
-  --tw-text-opacity: 1;
-  color: rgb(244 114 182 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
-}
-
-.decoration-black {
-  text-decoration-color: #000;
-}
-
-.underline-offset-1 {
-  text-underline-offset: 1px;
 }
 
 .hover\:bg-teal-500:hover {
@@ -835,10 +801,6 @@ video {
 .hover\:text-indigo-50:hover {
   --tw-text-opacity: 1;
   color: rgb(238 242 255 / var(--tw-text-opacity));
-}
-
-.hover\:opacity-60:hover {
-  opacity: 0.6;
 }
 
 .hover\:opacity-70:hover {
@@ -892,30 +854,42 @@ video {
     text-align: left;
   }
 
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
+  }
+}
+
+@media (min-aspect-ratio: 3/2) {
+  .widescreen\:section-min-height{
+    min-height: calc(100vh - 68px)
+  }
+}
+
+@media (min-aspect-ratio: 1/2) {
+  .tallscreen\:section-min-height{
+    min-height: calc(100vh - 68px)
   }
 }
 
